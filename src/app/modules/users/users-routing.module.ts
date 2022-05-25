@@ -7,7 +7,7 @@ import {UserResolver} from "./services";
 
 const routes: Routes = [
   {path:'',component: UsersComponent,children:[
-      {path:':id', component:UserDetailsComponent, resolve: {userData:UserResolver}}
+      {path:':id', component:UserDetailsComponent,  resolve: {userData:UserResolver}}
     ]}
 ];
 
