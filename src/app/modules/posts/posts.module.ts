@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 
 import { PostsRoutingModule } from './posts-routing.module';
-import {PostService} from "./services";
+import {PostResolver, PostService} from "./services";
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
 import { PostDetailsComponent } from './components/post-details/post-details.component';
@@ -21,7 +21,8 @@ import { PostDetailsComponent } from './components/post-details/post-details.com
     HttpClientModule
   ],
   providers: [
-    PostService
+    PostService,
+    PostResolver
   ]
 })
 export class PostsModule { }

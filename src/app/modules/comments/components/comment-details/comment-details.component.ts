@@ -14,9 +14,7 @@ comment:IComment;
   constructor(private activatedRoute:ActivatedRoute, private commentService:CommentService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({id})=>{
-      this.commentService.getById(id).subscribe(value => this.comment = value)
-    })
+    this.activatedRoute.data.subscribe(({commentData})=>this.comment = commentData)
   }
 
 }

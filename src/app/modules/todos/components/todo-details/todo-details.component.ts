@@ -15,9 +15,7 @@ todo:ITodo;
   constructor(private activatedRoute:ActivatedRoute, private todosService:TodosService) { }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(({id})=>{
-      this.todosService.getById(id).subscribe(value => this.todo = value)
-    })
+    this.activatedRoute.data.subscribe(({todoData})=>this.todo = todoData)
   }
 
 }

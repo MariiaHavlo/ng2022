@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule} from "@angular/common/http";
 
 import { TodosRoutingModule } from './todos-routing.module';
-import {TodosService} from "./services";
+import {TodoResolver, TodosService} from "./services";
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
@@ -22,7 +22,8 @@ import { TodoDetailsComponent } from './components/todo-details/todo-details.com
     HttpClientModule
   ],
   providers: [
-    TodosService
+    TodosService,
+    TodoResolver
   ]
 })
 export class TodosModule { }
